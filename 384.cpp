@@ -1,4 +1,6 @@
 ///edit 5
+some problem exists here
+solve this
 #include<stdio.h>
 //#include<iostream>
 //using namespace std;
