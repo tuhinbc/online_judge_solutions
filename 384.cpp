@@ -1,4 +1,5 @@
 ///edit 5
+//those changes done by administrator
 some problem exists here
 solve this
 #include<stdio.h>
