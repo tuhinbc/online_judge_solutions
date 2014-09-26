@@ -1,0 +1,48 @@
+3
+13 25 39 40 55 62 68 77 88 95
+88 62 77 20 40 10 99 56 45 36
+91 78 61 59 54 49 43 33 26 18
+
+#include<stdio.h>
+#include<iostream>
+#include<stdlib.h>
+#include<set>
+#include<map>
+#include<algorithm>
+#include<stack>
+#include<queue>
+using namespace std;
+int main()
+{
+    #ifdef tuhin
+    freopen("11942.in","r",stdin);
+    #endif
+    int tc,fst,nd,stat,t;
+    bool ok;
+    printf("Lumberjacks:\n");
+    scanf("%d",&tc);
+    while(tc--)
+    {
+        ok=true;
+        scanf("%d%d",&fst,&nd);
+        if(fst>nd) stat=0;
+        else stat=1;
+        if(stat)
+        for(int i=1;i<=8;i++)
+        {
+            scanf("%d",&t);
+            if(t<nd) ok=false;
+            nd=t;
+        }
+        else
+        for(int i=1;i<=8;i++)
+        {
+            scanf("%d",&t);
+            if(t>nd) ok=false;
+            nd=t;
+        }
+        printf("%s\n",ok?"Ordered":"Unordered ");
+
+    }
+    return 0;
+}
